@@ -1,0 +1,77 @@
+sidebar:
+  menu:
+    post: '[博客](/)'
+    wiki: '[项目](/wiki/)'
+    notes: '[便笺](/notes/)'
+    more: '[更多](/about/)'
+  widgets:
+    # Recent update
+    recent:
+      rss: /atom.xml # npm i hexo-generator-feed
+
+article:
+  # 分类颜色
+  category_color:
+    '新闻稿': '#DA0F47'
+    '设计开发': '#03a9f4'
+    # '奇思妙想': '#009688'
+    '解决方案': '#ff9800'
+    '技术加油站': '#4caf50'
+    '开源库': '#4caf50'
+    '博客主题': '#ffa000'
+    # '应用程序': '#e91e63'
+    # '实用脚本': '#009688'
+  share: [wechat, weibo, email, link]
+  related_posts:
+    enable: false
+    auto_cover: false
+
+comments:
+  service: beaudar
+  beaudar:
+    repo: lifeafter619/Beaudar-comments
+
+footer:
+  social:
+    github:
+      icon: '<img src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.3/social/08a41b181ce68.svg"/>'
+      url: https://github.com/lifeafter619
+    music:
+      icon: '<img src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.3/social/3845874.svg"/>'
+      url: https://music.163.com/#/user/home?id=1995068708
+    comments:
+      icon: '<img src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.3/social/942ebbf1a4b91.svg"/>'
+      url: /about/#comments
+    links:
+      icon: '<img src="https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/8411ed322ced6.svg"/>'
+      url: https://66619.eu.org
+    email:
+      icon: '<img src="https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/a1b00e20f425d.svg"/>'
+      url: mailto:mail@66619.eu.org
+  sitemap:
+    '博客':
+      - '[近期](/)'
+      - '[分类](/blog/categories/)'
+      - '[标签](/blog/tags/)'
+      - '[归档](/blog/archives/)'
+    '项目':
+      - '[开源库](/wiki/tags/开源库/)'
+      - '[实用脚本](/wiki/tags/实用脚本/)'
+      - '[博客主题](/wiki/tags/博客主题/)'
+      - '[应用程序](/wiki/tags/应用程序/)'
+    '社交':
+      - '[主站](https://66619.eu.org)'
+      - '[关于我](https://myself.66619.eu.org)'
+      - '[友链](/friends/)'
+      - '[留言板](/about/#comments)'
+    '更多':
+      - '[关于本站](/about/)'
+      - '[GitHub](https://github.com/lifeafter619)'
+      - '[GitLab](https://gitlab.com/lifeafter619)'
+      - '[Gitee](https://gitee.com/ethereal619)'
+  source: '[GitHub](https://github.com/lifeafter619/lifeafter619.github.io/)'
+
+
+style:
+  codeblock:
+    scrollbar: 0px
