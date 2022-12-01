@@ -1,35 +1,22 @@
 sidebar:
   menu:
-    post: '[博客](/)'
-    wiki: '[项目](/wiki/)'
-    notes: '[便笺](/notes/)'
-    more: '[更多](/about/)'
+    post: '[文章](/)'
+    wiki: '[关于](/about/)'
   widgets:
-    # Recent update
+    index: [recent, timeline] # for home/wiki/categories/tags/archives/404 pages
+    page: [toc] # for pages using 'layout:page'
+    post: [toc, ghrepo, ghissues] # for pages using 'layout:post'
+    about: [timeline, ghrepo]
+
+
     recent:
       rss: /atom.xml # npm i hexo-generator-feed
 
 article:
-  # 分类颜色
-  category_color:
-    '新闻稿': '#DA0F47'
-    '设计开发': '#03a9f4'
-    # '奇思妙想': '#009688'
-    '解决方案': '#ff9800'
-    '技术加油站': '#4caf50'
-    '开源库': '#4caf50'
-    '博客主题': '#ffa000'
-    # '应用程序': '#e91e63'
-    # '实用脚本': '#009688'
   share: [wechat, weibo, email, link]
   related_posts:
-    enable: false
+    enable: true
     auto_cover: false
-
-comments:
-  service: beaudar
-  beaudar:
-    repo: lifeafter619/Beaudar-comments
 
 footer:
   social:
@@ -54,24 +41,99 @@ footer:
       - '[分类](/blog/categories/)'
       - '[标签](/blog/tags/)'
       - '[归档](/blog/archives/)'
-    '项目':
-      - '[开源库](/wiki/tags/开源库/)'
-      - '[实用脚本](/wiki/tags/实用脚本/)'
-      - '[博客主题](/wiki/tags/博客主题/)'
-      - '[应用程序](/wiki/tags/应用程序/)'
     '社交':
       - '[主站](https://66619.eu.org)'
       - '[关于我](https://myself.66619.eu.org)'
       - '[友链](/friends/)'
       - '[留言板](/about/#comments)'
     '更多':
-      - '[关于本站](/about/)'
+      - '[关于](/about/)'
       - '[GitHub](https://github.com/lifeafter619)'
       - '[GitLab](https://gitlab.com/lifeafter619)'
       - '[Gitee](https://gitee.com/ethereal619)'
   source: '[GitHub](https://github.com/lifeafter619/lifeafter619.github.io/)'
 
+comments:
+  service: waline
+  waline:
+    js: https://unpkg.com/@waline/client@v2/dist/waline.js
+    css: https://unpkg.com/@waline/client@v2/dist/waline.css
+    # Waline server address url, you should set this to your own link
+    serverURL: https://66619.deta.dev # waline 地址
+    # If false, comment count will only be displayed in post page, not in home page
+    commentCount: true
+    # Pageviews count, Note: You should not enable both `waline.pageview` and `leancloud_visitors`.
+    pageview: false
+
+    # Custom locales
+    locale:
+      placeholder: 来叭叭，信息都不留也行哈~
+
+    # Custom emoji
+    emoji: 
+        - https://gcore.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs
+    #   - https://unpkg.com/@waline/emojis@1.1.0/weibo
+    #   - https://unpkg.com/@waline/emojis@1.1.0/alus
+    #   - https://unpkg.com/@waline/emojis@1.1.0/bilibili
+    #   - https://unpkg.com/@waline/emojis@1.1.0/qq
+    #   - https://unpkg.com/@waline/emojis@1.1.0/tieba
+    #   - https://unpkg.com/@waline/emojis@1.1.0/tw-emoji
+    #   - https://unpkg.com/@waline/emojis@1.1.0/bmoji
+
+    # Comment infomation, valid meta are nick, mail and link
+    # meta:
+    #   - 昵称
+    #   - 邮箱
+    #   - 链接
+
+    # Set required meta field, e.g.: [nick] | [nick, mail]
+    # requiredMeta:
+    #   - nick
+
+    # Language, available values: en-US, zh-CN, zh-TW, pt-BR, ru-RU, jp-JP
+    lang: zh-CN
+
+    wordLimit: 0 # 字数限制，0为不限制字数
+
+    # Whether enable login, can choose from 'enable', 'disable' and 'force'
+    # login: enable
+
+    # comment per page
+    pageSize: 5 # 每页显示评论数
 
 style:
+  color:
+    common:
+      theme: '#1BCDFC' # 主题色
+      accent: '#ff5722' # 强调色
+      link: '#2196f3' # 超链接颜色
+      button: '#1BCDFC' # 按钮颜色
+      hover: '#ff5722' # 按钮高亮颜色
+    light:
+      background: '#f8f8f8' # 浅色背景颜色
+      block: '#f2f2f2' # 块背景颜色
+      card: white # 卡片背景颜色
+      title: '#000' # 标题文本颜色
+      text: '#333' # 正文文本颜色
+      code: '#111' # 行内代码颜色
+    dark:
+      background: '#313438' # 深色背景颜色
+      background-mobile: black # 移动端深色背景（OLED调成纯黑可以省电）
+      block: '#2B2F33' # 块背景颜色
+      card: '#464D57' # 卡片背景颜色
+      title: '#fff' # 标题文本颜色
+      text: '#eee' # 正文文本颜色
+      code: '#ff7043' # 行内代码颜色
   codeblock:
     scrollbar: 0px
+  font-size: 16px
+  font-family:
+    logo: 'system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif'
+    body: 'system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif'
+    code: 'Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif'
+
+######## Tag Plugins ########
+tag_plugins:
+  # {% image %}
+  image:
+    fancybox: true

@@ -10,7 +10,7 @@ favicon: https://image.66619.eu.org/file/1761b16eda1636de67f17.png
 subtitle: '𝓙𝓾𝓼𝓽 𝓪 𝓬𝓵𝓸𝓾𝓭. | 66619.eu.org'
 timezone: ''
 description: '𝓙𝓾𝓼𝓽 𝓪 𝓬𝓵𝓸𝓾𝓭.'
-language: [zh-CN, en, zh-CN, zh-TW]
+language: [ zh-CN, en, zh-TW]
 email: mail@66619.eu.org
 
 # URL
@@ -72,6 +72,14 @@ index_generator:
 default_category: uncategorized
 category_map:
 tag_map:
+
+search:
+  service: local_search # local_search, todo...
+  local_search: # 在 front-matter 中设置 indexing:false 来避免被搜索索引
+    field: all # post, page, all
+    path: /search.json # 搜索文件存放位置
+    content: true # 是否搜索内容
+    codeblock: false # 是否搜索代码块（需要content: true)
 
 # Metadata elements
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
