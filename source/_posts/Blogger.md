@@ -10,6 +10,7 @@ poster:
 date: 2022-12-12 14:28:35
 description:
 cover: https://image.66619.eu.org/file/c5115ca242e2511f795b8.png
+sidebar: [search, ghuser]
 banner:
 ---
 
