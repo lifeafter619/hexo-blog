@@ -14,7 +14,7 @@
   "dependencies": {
     "decode-uri-component": "^0.2.2",
     "hexo": "^6.3.0",
-    "hexo-all-minifier": "^0.5.7",
+    "hexo-all-minifier": "^0.5.2",
     "hexo-autonofollow": "^1.0.1",
     "hexo-deployer-git": "^3.0.0",
     "hexo-generator-archive": "^2.0.0",
@@ -30,6 +30,6 @@
     "hexo-renderer-marked": "^6.0.0",
     "hexo-renderer-stylus": "^2.1.0",
     "hexo-server": "^3.0.0",
-    "hexo-theme-stellar": "^1.17.2"
+    "hexo-theme-stellar": "^1.18.5"
   }
 }

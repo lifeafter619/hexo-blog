@@ -3,12 +3,10 @@ sidebar:
     post: '[文章](/)'
     wiki: '[关于](/about/)'
   widgets:
-    index: [recent, timeline] # for home/wiki/categories/tags/archives/404 pages
+    index: [ghuser, recent, timeline] # for home/wiki/categories/tags/archives/404 pages
     page: [toc] # for pages using 'layout:page'
     post: [toc, ghrepo, ghissues] # for pages using 'layout:post'
-    about: [timeline, ghrepo]
-
-
+    about: [timeline, ghrepo, ghuser]
     recent:
       rss: /atom.xml # npm i hexo-generator-feed
 
@@ -16,7 +14,7 @@ article:
   share: [wechat, weibo, email, link]
   related_posts:
     enable: true
-    auto_cover: false
+    auto_cover: true
 
 search:
   service: local_search # local_search, todo...
@@ -46,12 +44,9 @@ footer:
   sitemap:
     '博客':
       - '[近期](/)'
-      - '[分类](/blog/categories/)'
-      - '[标签](/blog/tags/)'
-      - '[归档](/blog/archives/)'
+      - '[归档](/archives/)'
     '社交':
       - '[主站](https://66619.eu.org)'
-      - '[关于我](https://myself.66619.eu.org)'
       - '[友链](/friends/)'
       - '[留言板](/about/#comments)'
     '更多':
@@ -60,6 +55,9 @@ footer:
       - '[GitLab](https://gitlab.com/lifeafter619)'
       - '[Gitee](https://gitee.com/ethereal619)'
   source: '[GitHub](https://github.com/lifeafter619/lifeafter619.github.io/)'
+  content: | # 支持 Markdown 格式
+    本站由 [@619](/) 使用 [Stellar](https://github.com/xaoxuu/hexo-theme-stellar) 主题创建。
+    本博客所有文章除特别声明外，均采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可协议，转载请注明出处。
 
 comments:
   service: waline
